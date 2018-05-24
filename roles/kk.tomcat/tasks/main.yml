@@ -37,7 +37,7 @@
    template: src=service.j2 dest=/etc/systemd/system/tomcat.service mode=777
 
  - name: changing context.xml file
-   template: src=service.j2 dest=/opt/tomcat/apache-tomcat-8.5.30/webapps/manager/META-INF/context.xml
+   template: src=context.j2 dest=/opt/tomcat/apache-tomcat-8.5.30/webapps/manager/META-INF/context.xml
 
  - name: permissions for files
    file: path=/opt/tomcat/apache-tomcat-8.5.30/ owner=tomcat group=tomcat state=directory recurse=yes
